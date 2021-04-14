@@ -2,14 +2,12 @@
 
 namespace DesignPatterns\Behavioral\ChainOfResponsibilities\Responsible;
 
-use DesignPatterns\Behavioral\ChainOfResponsibilities\Handler;
 use Psr\Http\Message\RequestInterface;
+use DesignPatterns\Behavioral\ChainOfResponsibilities\Handler;
 
 class SlowDatabaseHandler extends Handler
 {
     /**
-     * @param RequestInterface $request
-     *
      * @return string|null
      */
     protected function processing(RequestInterface $request)

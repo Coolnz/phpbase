@@ -1,24 +1,14 @@
 <?php
-/**
- * 创建型模式
- *
- * php原型模式
- * 用于创建对象成本过高时
- *
- * @author  TIGERB <https://github.com/TIGERB>
- * @example 运行 php test.php
- */
-
 
 // 注册自加载
 spl_autoload_register('autoload');
 
 function autoload($class)
 {
-  require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//' . str_replace('\\', '/', $class) . '.php';
+    require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//' . str_replace('\\', '/', $class) . '.php';
 }
 
-/************************************* test *************************************/
+// test
 
 use prototype\Prototype;
 

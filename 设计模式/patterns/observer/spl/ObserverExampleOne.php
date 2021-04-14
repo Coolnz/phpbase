@@ -1,14 +1,15 @@
 <?php
+
 namespace spl;
 
 /**
- * 观察者实体类示例1
+ * 观察者实体类示例1.
  */
 class ObserverExampleOne implements \SplObserver
 {
     /**
-     * 行为
-     * @param \SplSubject $observable
+     * 行为.
+     *
      * @return mixed
      */
     public function update(\SplSubject $observable)

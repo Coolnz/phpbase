@@ -16,12 +16,12 @@ interface MediatorInterface
     public function sendResponse($content);
 
     /**
-     * makes a request
+     * makes a request.
      */
     public function makeRequest();
 
     /**
-     * queries the DB
+     * queries the DB.
      */
     public function queryDb();
 }

@@ -1,6 +1,5 @@
 <?php
 
-
 class WeightedRoundRobin
 {
     private static $_weightArray = [];

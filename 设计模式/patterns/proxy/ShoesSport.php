@@ -1,13 +1,14 @@
 <?php
+
 namespace proxy;
 
 /**
- * 运动鞋实体
+ * 运动鞋实体.
  */
 class ShoesSport implements ShoesInterface
 {
-  public function product()
-  {
-    echo "生产一双球鞋";
-  }
+    public function product()
+    {
+        echo '生产一双球鞋';
+    }
 }

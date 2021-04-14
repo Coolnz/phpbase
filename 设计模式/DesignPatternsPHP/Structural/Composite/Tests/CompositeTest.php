@@ -2,9 +2,12 @@
 
 namespace DesignPatterns\Structural\Composite\Tests;
 
-use DesignPatterns\Structural\Composite;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Structural\Composite;
 
+/**
+ * @coversNothing
+ */
 class CompositeTest extends TestCase
 {
     public function testRender()

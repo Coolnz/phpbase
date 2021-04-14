@@ -24,9 +24,6 @@ class State
         self::STATE_CLOSED,
     ];
 
-    /**
-     * @param string $state
-     */
     public function __construct(string $state)
     {
         self::ensureIsValidState($state);
@@ -34,15 +31,15 @@ class State
         $this->state = $state;
     }
 
+    public function __toString(): string
+    {
+        return $this->state;
+    }
+
     private static function ensureIsValidState(string $state)
     {
         if (!in_array($state, self::$validStates)) {
             throw new \InvalidArgumentException('Invalid state given');
         }
-    }
-
-    public function __toString(): string
-    {
-        return $this->state;
     }
 }

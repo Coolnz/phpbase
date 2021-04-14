@@ -9,9 +9,6 @@ class DatabaseConnection
      */
     private $configuration;
 
-    /**
-     * @param DatabaseConfiguration $config
-     */
     public function __construct(DatabaseConfiguration $config)
     {
         $this->configuration = $config;

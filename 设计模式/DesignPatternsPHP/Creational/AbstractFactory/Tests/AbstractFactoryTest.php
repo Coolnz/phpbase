@@ -2,11 +2,14 @@
 
 namespace DesignPatterns\Creational\AbstractFactory\Tests;
 
+use PHPUnit\Framework\TestCase;
 use DesignPatterns\Creational\AbstractFactory\CsvParser;
 use DesignPatterns\Creational\AbstractFactory\JsonParser;
 use DesignPatterns\Creational\AbstractFactory\ParserFactory;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class AbstractFactoryTest extends TestCase
 {
     public function testCanCreateCsvParser()
@@ -28,7 +31,7 @@ class AbstractFactoryTest extends TestCase
             [
                 ['A0', 'A1', 'A2'],
                 ['B0', 'B1', 'B2'],
-                ['C0', 'C1', 'C2']
+                ['C0', 'C1', 'C2'],
             ],
             $result
         );
@@ -44,7 +47,7 @@ class AbstractFactoryTest extends TestCase
         $this->assertEquals(
             [
                 ['B0', 'B1', 'B2'],
-                ['C0', 'C1', 'C2']
+                ['C0', 'C1', 'C2'],
             ],
             $result
         );

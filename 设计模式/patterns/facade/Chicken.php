@@ -1,4 +1,5 @@
 <?php
+
 namespace facade;
 
 /**
@@ -6,13 +7,13 @@ namespace facade;
  */
 class Chicken implements AnimalInterface
 {
-  /**
-   * 生产鸡
-   *
-   * @return string
-   */
-  public function produce()
-  {
-    echo "生产了一只鸡~ \n";
-  }
+    /**
+     * 生产鸡
+     *
+     * @return string
+     */
+    public function produce()
+    {
+        echo "生产了一只鸡~ \n";
+    }
 }

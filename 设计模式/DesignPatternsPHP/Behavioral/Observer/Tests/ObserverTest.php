@@ -2,10 +2,13 @@
 
 namespace DesignPatterns\Behavioral\Observer\Tests;
 
+use PHPUnit\Framework\TestCase;
 use DesignPatterns\Behavioral\Observer\User;
 use DesignPatterns\Behavioral\Observer\UserObserver;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class ObserverTest extends TestCase
 {
     public function testChangeInUserLeadsToUserObserverBeingNotified()

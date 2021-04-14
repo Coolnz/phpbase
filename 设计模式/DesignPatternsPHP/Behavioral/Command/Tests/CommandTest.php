@@ -2,11 +2,14 @@
 
 namespace DesignPatterns\Behavioral\Command\Tests;
 
-use DesignPatterns\Behavioral\Command\HelloCommand;
+use PHPUnit\Framework\TestCase;
 use DesignPatterns\Behavioral\Command\Invoker;
 use DesignPatterns\Behavioral\Command\Receiver;
-use PHPUnit\Framework\TestCase;
+use DesignPatterns\Behavioral\Command\HelloCommand;
 
+/**
+ * @coversNothing
+ */
 class CommandTest extends TestCase
 {
     public function testInvocation()

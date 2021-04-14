@@ -9,17 +9,11 @@ abstract class Service
      */
     protected $implementation;
 
-    /**
-     * @param Formatter $printer
-     */
     public function __construct(Formatter $printer)
     {
         $this->implementation = $printer;
     }
 
-    /**
-     * @param Formatter $printer
-     */
     public function setImplementation(Formatter $printer)
     {
         $this->implementation = $printer;

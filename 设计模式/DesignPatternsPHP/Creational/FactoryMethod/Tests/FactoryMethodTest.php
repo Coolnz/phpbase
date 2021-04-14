@@ -2,12 +2,15 @@
 
 namespace DesignPatterns\Creational\FactoryMethod\Tests;
 
-use DesignPatterns\Creational\FactoryMethod\FileLogger;
-use DesignPatterns\Creational\FactoryMethod\FileLoggerFactory;
-use DesignPatterns\Creational\FactoryMethod\StdoutLogger;
-use DesignPatterns\Creational\FactoryMethod\StdoutLoggerFactory;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Creational\FactoryMethod\FileLogger;
+use DesignPatterns\Creational\FactoryMethod\StdoutLogger;
+use DesignPatterns\Creational\FactoryMethod\FileLoggerFactory;
+use DesignPatterns\Creational\FactoryMethod\StdoutLoggerFactory;
 
+/**
+ * @coversNothing
+ */
 class FactoryMethodTest extends TestCase
 {
     public function testCanCreateStdoutLogging()

@@ -17,13 +17,10 @@ class Receiver
      */
     private $output = [];
 
-    /**
-     * @param string $str
-     */
     public function write(string $str)
     {
         if ($this->enableDate) {
-            $str .= ' ['.date('Y-m-d').']';
+            $str .= ' [' . date('Y-m-d') . ']';
         }
 
         $this->output[] = $str;
@@ -35,7 +32,7 @@ class Receiver
     }
 
     /**
-     * Enable receiver to display message date
+     * Enable receiver to display message date.
      */
     public function enableDate()
     {
@@ -43,7 +40,7 @@ class Receiver
     }
 
     /**
-     * Disable receiver to display message date
+     * Disable receiver to display message date.
      */
     public function disableDate()
     {

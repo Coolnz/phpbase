@@ -3,74 +3,70 @@
  * Created by PhpStorm.
  * User: JeffcottLu
  * Date: 2019-02-04
- * Time: 17:34
+ * Time: 17:34.
  */
-
 function readFile1($file)
 {
-	$fp = fopen($file, "r");
-	$line = 10;
-	$pos = -2;
-	$t = " ";
-	$data = "";
-	while ($line > 0) {
-		while ($t != "\n") {
-			fseek($fp, $pos, SEEK_END);
-			$t = fgetc($fp);
-			$pos --;
-		}
-		$t = " ";
-		$data .= fgets($fp);
-		$line --;
-	}
-	fclose ($fp);
+    $fp = fopen($file, 'r');
+    $line = 10;
+    $pos = -2;
+    $t = ' ';
+    $data = '';
+    while ($line > 0) {
+        while ("\n" != $t) {
+            fseek($fp, $pos, SEEK_END);
+            $t = fgetc($fp);
+            --$pos;
+        }
+        $t = ' ';
+        $data .= fgets($fp);
+        --$line;
+    }
+    fclose($fp);
 }
 
 //echo $data;
 
-
 function readFile2($file)
 {
-	$fp = fopen($file, "r");
-	$num = 10;
-	$chunk = 4096;
-	$fs = sprintf("%u", filesize($file));
-	$max = (intval($fs) == PHP_INT_MAX) ? PHP_INT_MAX : filesize($file);
-	for ($len = 0; $len < $max; $len += $chunk) {
-		$seekSize = ($max - $len > $chunk) ? $chunk : $max - $len;
-		fseek($fp, ($len + $seekSize) * -1, SEEK_END);
-		$readData = fread($fp, $seekSize) . $readData;
+    $fp = fopen($file, 'r');
+    $num = 10;
+    $chunk = 4096;
+    $fs = sprintf('%u', filesize($file));
+    $max = (PHP_INT_MAX == intval($fs)) ? PHP_INT_MAX : filesize($file);
+    for ($len = 0; $len < $max; $len += $chunk) {
+        $seekSize = ($max - $len > $chunk) ? $chunk : $max - $len;
+        fseek($fp, ($len + $seekSize) * -1, SEEK_END);
+        $readData = fread($fp, $seekSize) . $readData;
 
-		if (substr_count($readData, "\n") >= $num + 1) {
-			preg_match("!(.*?\n){".($num)."}$!", $readData, $match);
-			$data = $match[0];
-			break;
-		}
-	}
-	fclose($fp);
-	echo $data;
+        if (mb_substr_count($readData, "\n") >= $num + 1) {
+            preg_match("!(.*?\n){" . ($num) . '}$!', $readData, $match);
+            $data = $match[0];
+            break;
+        }
+    }
+    fclose($fp);
+    echo $data;
 }
 
-
-function tail($fp,$n,$base=5)
+function tail($fp, $n, $base = 5)
 {
-	assert($n>0);
-	$pos = $n+1;
-	$lines = array();
-	while(count($lines) <= $n){
-		try{
-			fseek($fp,-$pos,SEEK_END);
-		} catch (Exception $e){
-			fseek(0);
-			break;
-		}
-		$pos *= $base;
-		while(!feof($fp)){
-			array_unshift($lines,fgets($fp));
-		}
-	}
-	return array_slice($lines,0,$n);
+    assert($n > 0);
+    $pos = $n + 1;
+    $lines = [];
+    while (count($lines) <= $n) {
+        try {
+            fseek($fp, -$pos, SEEK_END);
+        } catch (Exception $e) {
+            fseek(0);
+            break;
+        }
+        $pos *= $base;
+        while (!feof($fp)) {
+            array_unshift($lines, fgets($fp));
+        }
+    }
+
+    return array_slice($lines, 0, $n);
 }
-var_dump(tail(fopen("access.log","r+"),10));
-
-
+var_dump(tail(fopen('access.log', 'r+'), 10));

@@ -2,10 +2,13 @@
 
 namespace DesignPatterns\Structural\DependencyInjection\Tests;
 
-use DesignPatterns\Structural\DependencyInjection\DatabaseConfiguration;
-use DesignPatterns\Structural\DependencyInjection\DatabaseConnection;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Structural\DependencyInjection\DatabaseConnection;
+use DesignPatterns\Structural\DependencyInjection\DatabaseConfiguration;
 
+/**
+ * @coversNothing
+ */
 class DependencyInjectionTest extends TestCase
 {
     public function testDependencyInjection()

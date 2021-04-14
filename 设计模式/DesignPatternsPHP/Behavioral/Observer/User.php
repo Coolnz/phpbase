@@ -4,7 +4,7 @@ namespace DesignPatterns\Behavioral\Observer;
 
 /**
  * User implements the observed object (called Subject), it maintains a list of observers and sends notifications to
- * them in case changes are made on the User object
+ * them in case changes are made on the User object.
  */
 class User implements \SplSubject
 {

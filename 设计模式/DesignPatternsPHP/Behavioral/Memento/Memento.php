@@ -9,9 +9,6 @@ class Memento
      */
     private $state;
 
-    /**
-     * @param State $stateToSave
-     */
     public function __construct(State $stateToSave)
     {
         $this->state = $stateToSave;

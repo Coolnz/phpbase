@@ -8,16 +8,11 @@ namespace DesignPatterns\Creational\StaticFactory;
  */
 final class StaticFactory
 {
-    /**
-     * @param string $type
-     *
-     * @return Formatter
-     */
     public static function factory(string $type): Formatter
     {
-        if ($type == 'number') {
+        if ('number' == $type) {
             return new FormatNumber();
-        } elseif ($type == 'string') {
+        } elseif ('string' == $type) {
             return new FormatString();
         }
 

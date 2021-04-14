@@ -1,22 +1,24 @@
 <?php
+
 namespace factory;
 
 /**
  * 简单动物工厂
  * 无须实现动物工厂接口
- * 生产动物
+ * 生产动物.
  */
 class SampleFactory
 {
-
     /**
-     * 生产方法
+     * 生产方法.
      *
      * 生产动物
-     * @param  string $type 动物类型
+     *
+     * @param string $type 动物类型
+     *
      * @return mixed
      */
-    public static function produce($type='')
+    public static function produce($type = '')
     {
         switch ($type) {
             case 'chicken':

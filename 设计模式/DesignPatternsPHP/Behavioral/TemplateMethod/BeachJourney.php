@@ -6,6 +6,6 @@ class BeachJourney extends Journey
 {
     protected function enjoyVacation(): string
     {
-        return "Swimming and sun-bathing";
+        return 'Swimming and sun-bathing';
     }
 }

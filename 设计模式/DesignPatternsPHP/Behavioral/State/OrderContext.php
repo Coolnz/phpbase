@@ -9,7 +9,7 @@ class OrderContext
      */
     private $state;
 
-    public static function create(): OrderContext
+    public static function create(): self
     {
         $order = new self();
         $order->state = new StateCreated();

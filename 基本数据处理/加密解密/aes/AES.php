@@ -1,6 +1,5 @@
 <?php
 
-
 class AES
 {
     protected $_cipher = 'rijndael-128';
@@ -270,7 +269,7 @@ class AES
             $string .= chr(hexdec($hex[$i] . $hex[$i + 1]));
         }
 
-        return  $string;
+        return $string;
     }
 
     protected function _genericInit()

@@ -10,9 +10,7 @@ class UserObserver implements \SplObserver
     private $changedUsers = [];
 
     /**
-     * It is called by the Subject, usually by SplSubject::notify()
-     *
-     * @param \SplSubject $subject
+     * It is called by the Subject, usually by SplSubject::notify().
      */
     public function update(\SplSubject $subject)
     {

@@ -2,11 +2,14 @@
 
 namespace DesignPatterns\Behavioral\NullObject\Tests;
 
+use PHPUnit\Framework\TestCase;
+use DesignPatterns\Behavioral\NullObject\Service;
 use DesignPatterns\Behavioral\NullObject\NullLogger;
 use DesignPatterns\Behavioral\NullObject\PrintLogger;
-use DesignPatterns\Behavioral\NullObject\Service;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class LoggerTest extends TestCase
 {
     public function testNullObject()

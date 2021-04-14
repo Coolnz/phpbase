@@ -1,7 +1,10 @@
 <?php
+
 namespace factoryAbstract;
 
-interface Factory {
+interface Factory
+{
     public function createFarm();
+
     public function createZoo();
 }

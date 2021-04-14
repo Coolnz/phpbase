@@ -2,11 +2,14 @@
 
 namespace DesignPatterns\Structural\Decorator\Tests;
 
-use DesignPatterns\Structural\Decorator\DoubleRoomBooking;
-use DesignPatterns\Structural\Decorator\ExtraBed;
-use DesignPatterns\Structural\Decorator\WiFi;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Structural\Decorator\WiFi;
+use DesignPatterns\Structural\Decorator\ExtraBed;
+use DesignPatterns\Structural\Decorator\DoubleRoomBooking;
 
+/**
+ * @coversNothing
+ */
 class DecoratorTest extends TestCase
 {
     public function testCanCalculatePriceForBasicDoubleRoomBooking()

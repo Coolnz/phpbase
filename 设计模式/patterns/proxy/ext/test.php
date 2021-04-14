@@ -1,6 +1,5 @@
 <?php
 
-// 注册自加载
 spl_autoload_register('autoload');
 
 function autoload($class)
@@ -8,11 +7,10 @@ function autoload($class)
     require dirname($_SERVER['SCRIPT_FILENAME']) . '//..//..//' . str_replace('\\', '/', $class) . '.php';
 }
 
-/************************************* test *************************************/
+// test
 
-use proxy\ext\RealSubject;
 use proxy\ext\Proxy;
-
+use proxy\ext\RealSubject;
 
 try {
     echo "未加代理之前：\n";

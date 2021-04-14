@@ -2,18 +2,20 @@
 
 namespace proxy\ext;
 
-class Proxy implements Subject,IProxy {
-
-    private $subject = null;
+class Proxy implements Subject, IProxy
+{
+    private $subject;
 
     /**
      * Proxy constructor.
      */
-    public function __construct(Subject $_subject) {
+    public function __construct(Subject $_subject)
+    {
         $this->subject = $_subject;
     }
 
-    public function doSomething() {
+    public function doSomething()
+    {
         $this->subject->doSomething();
         $this->extension();
     }
@@ -22,6 +24,4 @@ class Proxy implements Subject,IProxy {
     {
         echo "实现一个扩展\n";
     }
-
-
 }

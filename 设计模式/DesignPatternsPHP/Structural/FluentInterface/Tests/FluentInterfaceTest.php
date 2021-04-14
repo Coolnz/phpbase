@@ -2,9 +2,12 @@
 
 namespace DesignPatterns\Structural\FluentInterface\Tests;
 
-use DesignPatterns\Structural\FluentInterface\Sql;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Structural\FluentInterface\Sql;
 
+/**
+ * @coversNothing
+ */
 class FluentInterfaceTest extends TestCase
 {
     public function testBuildSQL()

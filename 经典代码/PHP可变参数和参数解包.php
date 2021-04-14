@@ -16,7 +16,6 @@ function test($a, $b, $c)
 $test1 = test($tip[0], $tip[1], $tip[2]);
 $test2 = test(...$tip);
 
-
 dd($test1, $test2, handle($tip));
 
 //$tes1和$test2只是调用方法不同；同一个索引数组里的多个元素，直接使用PHP的可变参数去调用；

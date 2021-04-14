@@ -1,15 +1,16 @@
 <?php
+
 namespace factory;
 
 /**
- * 动物园
+ * 动物园.
  *
  * 生产动物
  */
 class Zoo implements Factory
 {
     /**
-     * 构造函数
+     * 构造函数.
      */
     public function __construct()
     {
@@ -17,13 +18,15 @@ class Zoo implements Factory
     }
 
     /**
-     * 生产方法
+     * 生产方法.
      *
      * 生产动物
-     * @param  string $type 动物类型
+     *
+     * @param string $type 动物类型
+     *
      * @return mixed
      */
-    public function produce($type='')
+    public function produce($type = '')
     {
         switch ($type) {
             case 'chicken':

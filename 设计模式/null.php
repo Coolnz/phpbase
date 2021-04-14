@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JeffcottLu
- * Date: 2019-01-14
- * Time: 14:02
- */
 ////测试类
 //class Person{
 //	public function code(){
@@ -37,46 +31,41 @@
 //$phper = getPerson('PHP');
 //$phper->code();
 
-
 interface LoggerInterface
 {
-	public function log(String $str);
-
+    public function log(string $str);
 }
 
 class PrintLogger implements LoggerInterface
 {
-	public function log(String $str)
-	{
-		// TODO: Implement log() method.
-	}
-
+    public function log(string $str)
+    {
+        // TODO: Implement log() method.
+    }
 }
 
 class NullLogger implements LoggerInterface
 {
-	public function log(String $str)
-	{
-		// TODO: Implement log() method.
-	}
+    public function log(string $str)
+    {
+        // TODO: Implement log() method.
+    }
 }
 
 class Service
 {
-	private $logger;
-	public function __construct(LoggerInterface $logger)
-	{
-		$this->logger = $logger;
-	}
+    private $logger;
 
-	public function doSomething()
-	{
-		$this->logger->log('we are in'. __METHOD__);
-	}
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+
+    public function doSomething()
+    {
+        $this->logger->log('we are in' . __METHOD__);
+    }
 }
-
 
 $dd = new Service(new NullLogger());
 echo $dd->doSomething('ddddddd');
-
-

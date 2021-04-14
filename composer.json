@@ -1,11 +1,11 @@
 {
     "require": {
-        "illuminate/support": "^5.8",
         "pandeydip/dump-die": "^1.0",
         "guzzle/guzzle": "^3.9",
         "predis/predis": "^1.1",
         "guzzlehttp/guzzle": "^6.4",
-        "nesbot/carbon": "^2.32"
+        "nesbot/carbon": "^2.32",
+        "illuminate/support": "^8.37"
     },
     "autoload": {
         "psr-4": {

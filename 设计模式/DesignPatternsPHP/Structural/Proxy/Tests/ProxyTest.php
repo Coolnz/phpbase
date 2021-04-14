@@ -2,9 +2,12 @@
 
 namespace DesignPatterns\Structural\Proxy\Tests;
 
-use DesignPatterns\Structural\Proxy\BankAccountProxy;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Structural\Proxy\BankAccountProxy;
 
+/**
+ * @coversNothing
+ */
 class ProxyTest extends TestCase
 {
     public function testProxyWillOnlyExecuteExpensiveGetBalanceOnce()

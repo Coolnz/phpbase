@@ -1,16 +1,17 @@
 <?php
+
 namespace adapter;
 
 use Exception;
 
 /**
- * 音频设备实体
+ * 音频设备实体.
  */
 class AudioPlayer implements MediaInterface
 {
-  public function play($file='', $type='')
-  {
-    switch ($type) {
+    public function play($file = '', $type = '')
+    {
+        switch ($type) {
       case 'mp3':
         echo 'playing file: ' . $file . ".mp3\n";
         break;
@@ -27,6 +28,5 @@ class AudioPlayer implements MediaInterface
         throw new Exception("$type is not supported", 400);
         break;
     }
-
-  }
+    }
 }

@@ -1,10 +1,11 @@
 <?php
+
 namespace builder;
 
 /**
- * 软件接口
+ * 软件接口.
  */
 interface Software
 {
-  public function produce();
+    public function produce();
 }

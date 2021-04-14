@@ -3,7 +3,7 @@
 namespace DesignPatterns\Behavioral\Mediator;
 
 /**
- * Mediator is the concrete Mediator for this design pattern
+ * Mediator is the concrete Mediator for this design pattern.
  *
  * In this example, I have made a "Hello World" with the Mediator Pattern
  */
@@ -24,11 +24,6 @@ class Mediator implements MediatorInterface
      */
     private $client;
 
-    /**
-     * @param Subsystem\Database $database
-     * @param Subsystem\Client $client
-     * @param Subsystem\Server $server
-     */
     public function __construct(Subsystem\Database $database, Subsystem\Client $client, Subsystem\Server $server)
     {
         $this->database = $database;

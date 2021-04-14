@@ -6,19 +6,19 @@ namespace decorator;
  * Created by PhpStorm.
  * User: zhudong
  * Date: 2017/7/14
- * Time: 下午7:36
+ * Time: 下午7:36.
  */
+class PulisherDerector implements PulisherInterface
+{
+    protected $pulisher;
 
-class PulisherDerector implements PulisherInterface {
-
-    protected $pulisher = null;
-
-    function derect(PulisherInterface $pulisher) {
+    public function derect(PulisherInterface $pulisher)
+    {
         $this->pulisher = $pulisher;
     }
 
-    public function pulishText() {
+    public function pulishText()
+    {
         $this->pulisher->pulishText();
     }
-
 }

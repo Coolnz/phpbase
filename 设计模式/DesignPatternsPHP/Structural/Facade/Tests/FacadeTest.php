@@ -2,10 +2,13 @@
 
 namespace DesignPatterns\Structural\Facade\Tests;
 
+use PHPUnit\Framework\TestCase;
 use DesignPatterns\Structural\Facade\Facade;
 use DesignPatterns\Structural\Facade\OsInterface;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class FacadeTest extends TestCase
 {
     public function testComputerOn()

@@ -17,7 +17,6 @@ function search($filteredPath, $text)
     return $result;
 }
 
-
 function replace($filteredPath, $text)
 {
     $dict = new SimpleDict($filteredPath);
@@ -26,7 +25,7 @@ function replace($filteredPath, $text)
 //    // 高级替换
 //    $replaced = $dict->replace('some text here...', function ($word, $value) {
 //        return "[$word -> $value]";
-////        echo "[$word -> $value]";
+    ////        echo "[$word -> $value]";
 //    });
 
     return $replaced;

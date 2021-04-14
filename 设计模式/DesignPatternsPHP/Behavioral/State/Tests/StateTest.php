@@ -2,9 +2,12 @@
 
 namespace DesignPatterns\Behavioral\State\Tests;
 
-use DesignPatterns\Behavioral\State\OrderContext;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Behavioral\State\OrderContext;
 
+/**
+ * @coversNothing
+ */
 class StateTest extends TestCase
 {
     public function testIsCreatedWithStateCreated()

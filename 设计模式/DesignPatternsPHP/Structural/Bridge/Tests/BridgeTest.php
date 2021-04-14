@@ -2,11 +2,14 @@
 
 namespace DesignPatterns\Structural\Bridge\Tests;
 
-use DesignPatterns\Structural\Bridge\HelloWorldService;
-use DesignPatterns\Structural\Bridge\HtmlFormatter;
-use DesignPatterns\Structural\Bridge\PlainTextFormatter;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Structural\Bridge\HtmlFormatter;
+use DesignPatterns\Structural\Bridge\HelloWorldService;
+use DesignPatterns\Structural\Bridge\PlainTextFormatter;
 
+/**
+ * @coversNothing
+ */
 class BridgeTest extends TestCase
 {
     public function testCanPrintUsingThePlainTextFormatter()

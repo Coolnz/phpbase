@@ -1,12 +1,14 @@
 <?php
+
 namespace proxy\dynamic;
 
 class SubjectIH implements InvocationHandler
 {
-    private $obj = null;
+    private $obj;
 
     /**
      * SubjectIH constructor.
+     *
      * @param null $obj
      */
     public function __construct($obj)
@@ -18,12 +20,11 @@ class SubjectIH implements InvocationHandler
      * @param $proxy
      * @param $method
      * @param $args
+     *
      * @return mixed
      */
     public function invoke($proxy, $method, $args)
     {
-        return call_user_func_array(array($this->obj, $method), $args);
+        return call_user_func_array([$this->obj, $method], $args);
     }
-
-
 }

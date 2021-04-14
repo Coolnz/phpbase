@@ -1,4 +1,5 @@
 <?php
+
 namespace factoryAbstract;
 
 class PlantFactory implements Factory

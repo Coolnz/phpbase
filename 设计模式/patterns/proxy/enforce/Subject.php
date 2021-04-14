@@ -1,7 +1,10 @@
 <?php
+
 namespace proxy\enforce;
 
-interface Subject {
+interface Subject
+{
     public function doSomething();
+
     public function getProxy();
 }

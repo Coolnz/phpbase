@@ -2,9 +2,12 @@
 
 namespace DesignPatterns\Tests\Visitor\Tests;
 
-use DesignPatterns\Behavioral\Visitor;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Behavioral\Visitor;
 
+/**
+ * @coversNothing
+ */
 class VisitorTest extends TestCase
 {
     /**
@@ -27,8 +30,6 @@ class VisitorTest extends TestCase
 
     /**
      * @dataProvider provideRoles
-     *
-     * @param Visitor\Role $role
      */
     public function testVisitSomeRole(Visitor\Role $role)
     {

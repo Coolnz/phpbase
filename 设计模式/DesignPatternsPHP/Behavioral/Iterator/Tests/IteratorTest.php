@@ -2,10 +2,13 @@
 
 namespace DesignPatterns\Behavioral\Iterator\Tests;
 
+use PHPUnit\Framework\TestCase;
 use DesignPatterns\Behavioral\Iterator\Book;
 use DesignPatterns\Behavioral\Iterator\BookList;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class IteratorTest extends TestCase
 {
     public function testCanIterateOverBookList()

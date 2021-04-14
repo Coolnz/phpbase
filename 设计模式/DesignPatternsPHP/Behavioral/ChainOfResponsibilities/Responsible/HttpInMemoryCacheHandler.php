@@ -2,8 +2,8 @@
 
 namespace DesignPatterns\Behavioral\ChainOfResponsibilities\Responsible;
 
-use DesignPatterns\Behavioral\ChainOfResponsibilities\Handler;
 use Psr\Http\Message\RequestInterface;
+use DesignPatterns\Behavioral\ChainOfResponsibilities\Handler;
 
 class HttpInMemoryCacheHandler extends Handler
 {
@@ -12,10 +12,6 @@ class HttpInMemoryCacheHandler extends Handler
      */
     private $data;
 
-    /**
-     * @param array $data
-     * @param Handler|null $successor
-     */
     public function __construct(array $data, Handler $successor = null)
     {
         parent::__construct($successor);
@@ -24,8 +20,6 @@ class HttpInMemoryCacheHandler extends Handler
     }
 
     /**
-     * @param RequestInterface $request
-     *
      * @return string|null
      */
     protected function processing(RequestInterface $request)
@@ -36,7 +30,7 @@ class HttpInMemoryCacheHandler extends Handler
             $request->getUri()->getQuery()
         );
 
-        if ($request->getMethod() == 'GET' && isset($this->data[$key])) {
+        if ('GET' == $request->getMethod() && isset($this->data[$key])) {
             return $this->data[$key];
         }
 

@@ -22,11 +22,19 @@ abstract class Journey
         $this->thingsToDo[] = $this->enjoyVacation();
         $buyGift = $this->buyGift();
 
-        if ($buyGift !== null) {
+        if (null !== $buyGift) {
             $this->thingsToDo[] = $buyGift;
         }
 
         $this->thingsToDo[] = $this->takePlane();
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getThingsToDo(): array
+    {
+        return $this->thingsToDo;
     }
 
     /**
@@ -36,9 +44,9 @@ abstract class Journey
 
     /**
      * This method is also part of the algorithm but it is optional.
-     * You can override it only if you need to
+     * You can override it only if you need to.
      *
-     * @return null|string
+     * @return string|null
      */
     protected function buyGift()
     {
@@ -53,13 +61,5 @@ abstract class Journey
     private function takePlane(): string
     {
         return 'Taking the plane';
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getThingsToDo(): array
-    {
-        return $this->thingsToDo;
     }
 }

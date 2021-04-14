@@ -2,13 +2,16 @@
 
 namespace DesignPatterns\Behavioral\Specification\Tests;
 
+use PHPUnit\Framework\TestCase;
 use DesignPatterns\Behavioral\Specification\Item;
-use DesignPatterns\Behavioral\Specification\NotSpecification;
 use DesignPatterns\Behavioral\Specification\OrSpecification;
 use DesignPatterns\Behavioral\Specification\AndSpecification;
+use DesignPatterns\Behavioral\Specification\NotSpecification;
 use DesignPatterns\Behavioral\Specification\PriceSpecification;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class SpecificationTest extends TestCase
 {
     public function testCanOr()

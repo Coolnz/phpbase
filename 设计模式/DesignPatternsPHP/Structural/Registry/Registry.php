@@ -22,8 +22,7 @@ abstract class Registry
     ];
 
     /**
-     * @param string $key
-     * @param mixed  $value
+     * @param mixed $value
      *
      * @return void
      */
@@ -37,8 +36,6 @@ abstract class Registry
     }
 
     /**
-     * @param string $key
-     *
      * @return mixed
      */
     public static function get(string $key)

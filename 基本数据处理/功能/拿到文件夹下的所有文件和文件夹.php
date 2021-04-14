@@ -147,9 +147,6 @@ function getDocByScanDir($dirPath)
     }
 }
 
-
-
-
 function getDocByReadDir2($path)
 {
     $handle = opendir($path); //打开目录返回句柄
@@ -193,8 +190,6 @@ function getDocByReadDir3($dir)
     }
 }
 //get_dir_info($dir);
-
-
 
 /**
  * @param $path
@@ -246,7 +241,6 @@ $dirPath = '/Users/luruiyang/Documents/github';
 
 // 获取该文件夹下的所有文件
 //dump(getDocByScanDir($dirPath));
-
 
 /**
  * 递归+dir().
@@ -318,10 +312,5 @@ dump(getDocByReadDir1($dirPath));
 // 类似，但是文件夹加了颜色
 //dump(getDocByDir($dirPath));
 
-
 // 获取该文件夹下所有文件的绝对路径
 //dump(getDocByReadDir3($dirPath));
-
-
-
-

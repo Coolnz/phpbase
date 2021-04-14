@@ -23,7 +23,7 @@ class CsvParser implements Parser
         $parsedLines = [];
 
         foreach (explode(PHP_EOL, $input) as $line) {
-            if (!$headerWasParsed && $this->skipHeaderLine === self::OPTION_CONTAINS_HEADER) {
+            if (!$headerWasParsed && self::OPTION_CONTAINS_HEADER === $this->skipHeaderLine) {
                 $headerWasParsed = true;
                 continue;
             }

@@ -15,10 +15,6 @@ if (!function_exists('tda2oda')) {
      * 用array_reduce()实现二维转一维；.
      *
      * array_merge把相同字符串键名的数组覆盖合并，所以必须先用array_value取出值后，再合并；
-     *
-     * @param array $items
-     *
-     * @return array
      */
     function tda2oda(array $items): array
     {
@@ -48,8 +44,6 @@ if (!function_exists('currentAndNext')) {
      * 取出关联数组的相邻元素.
      *
      * @param $array
-     *
-     * @return array
      */
     function currentAndNext($array): array
     {
@@ -86,8 +80,6 @@ function arrUnique($array)
  *
  * @param $arr
  * @param $element
- *
- * @return array
  */
 function arrayRemoveElement(&$arr, $element): array
 {
@@ -150,7 +142,6 @@ if (!function_exists('arrayToString')) {
         return $arr;
     }
 }
-
 
 if (!function_exists('combineSameKey')) {
     function combineSameKey($array, $combineKey)

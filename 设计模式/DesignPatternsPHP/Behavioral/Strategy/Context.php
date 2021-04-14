@@ -14,7 +14,7 @@ class Context
         $this->comparator = $comparator;
     }
 
-    public function executeStrategy(array $elements) : array
+    public function executeStrategy(array $elements): array
     {
         uasort($elements, [$this->comparator, 'compare']);
 

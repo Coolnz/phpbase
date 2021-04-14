@@ -14,10 +14,6 @@ class Facade
      */
     private $bios;
 
-    /**
-     * @param BiosInterface $bios
-     * @param OsInterface   $os
-     */
     public function __construct(BiosInterface $bios, OsInterface $os)
     {
         $this->bios = $bios;

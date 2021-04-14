@@ -3,7 +3,7 @@
 namespace DesignPatterns\Behavioral\Memento;
 
 /**
- * Ticket is the "Originator" in this implementation
+ * Ticket is the "Originator" in this implementation.
  */
 class Ticket
 {

@@ -18,7 +18,7 @@ class OrSpecification implements SpecificationInterface
     }
 
     /**
-     * if at least one specification is true, return true, else return false
+     * if at least one specification is true, return true, else return false.
      */
     public function isSatisfiedBy(Item $item): bool
     {
@@ -27,6 +27,7 @@ class OrSpecification implements SpecificationInterface
                 return true;
             }
         }
+
         return false;
     }
 }

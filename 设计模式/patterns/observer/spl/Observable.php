@@ -1,24 +1,26 @@
 <?php
+
 namespace spl;
 
 /**
- * 被观察者实体类
+ * 被观察者实体类.
  *
  * 实现附加观察者，删除观察者，通知观察者方法
  */
 class Observable implements \SplSubject
 {
     /**
-     * 观察者们
+     * 观察者们.
+     *
      * @var array
      */
     private $_observers = [];
 
-    private $_message = "通知消息";
+    private $_message = '通知消息';
 
     /**
-     * 附加观察者
-     * @param \SplObserver $observer
+     * 附加观察者.
+     *
      * @return void
      */
     public function attach(\SplObserver $observer)
@@ -29,8 +31,8 @@ class Observable implements \SplSubject
     }
 
     /**
-     * 解除观察者
-     * @param \SplObserver $observer
+     * 解除观察者.
+     *
      * @return void
      */
     public function detach(\SplObserver $observer)
@@ -43,7 +45,8 @@ class Observable implements \SplSubject
     }
 
     /**
-     * 通知观察者
+     * 通知观察者.
+     *
      * @return void
      */
     public function notify()
@@ -53,14 +56,14 @@ class Observable implements \SplSubject
         }
     }
 
-
     /**
-     * 获取消息
+     * 获取消息.
+     *
      * @return string
      */
     public function getMessage()
     {
-       return $this->_message;
+        return $this->_message;
     }
 
     public function setMessage($msg)
@@ -68,4 +71,3 @@ class Observable implements \SplSubject
         $this->_message = $msg;
     }
 }
-

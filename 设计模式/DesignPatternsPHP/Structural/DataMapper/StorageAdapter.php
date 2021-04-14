@@ -15,8 +15,6 @@ class StorageAdapter
     }
 
     /**
-     * @param int $id
-     *
      * @return array|null
      */
     public function find(int $id)

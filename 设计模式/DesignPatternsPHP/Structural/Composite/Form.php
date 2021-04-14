@@ -18,8 +18,6 @@ class Form implements RenderableInterface
      * of the form.
      *
      * from the outside, one will not see this and the form will act like a single object instance
-     *
-     * @return string
      */
     public function render(): string
     {
@@ -34,9 +32,6 @@ class Form implements RenderableInterface
         return $formCode;
     }
 
-    /**
-     * @param RenderableInterface $element
-     */
     public function addElement(RenderableInterface $element)
     {
         $this->elements[] = $element;

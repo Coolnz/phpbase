@@ -2,10 +2,13 @@
 
 namespace DesignPatterns\Creational\SimpleFactory\Tests;
 
+use PHPUnit\Framework\TestCase;
 use DesignPatterns\Creational\SimpleFactory\Bicycle;
 use DesignPatterns\Creational\SimpleFactory\SimpleFactory;
-use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class SimpleFactoryTest extends TestCase
 {
     public function testCanCreateBicycle()

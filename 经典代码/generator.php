@@ -116,4 +116,3 @@ class Demo4
 
 $demo4 = new Demo4();
 dd($demo4->gen(5));
-

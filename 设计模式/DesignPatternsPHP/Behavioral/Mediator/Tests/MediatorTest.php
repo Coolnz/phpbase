@@ -2,12 +2,15 @@
 
 namespace DesignPatterns\Tests\Mediator\Tests;
 
+use PHPUnit\Framework\TestCase;
 use DesignPatterns\Behavioral\Mediator\Mediator;
 use DesignPatterns\Behavioral\Mediator\Subsystem\Client;
-use DesignPatterns\Behavioral\Mediator\Subsystem\Database;
 use DesignPatterns\Behavioral\Mediator\Subsystem\Server;
-use PHPUnit\Framework\TestCase;
+use DesignPatterns\Behavioral\Mediator\Subsystem\Database;
 
+/**
+ * @coversNothing
+ */
 class MediatorTest extends TestCase
 {
     public function testOutputHelloWorld()

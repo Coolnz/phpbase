@@ -16,7 +16,7 @@ class WorkerPool implements \Countable
 
     public function get(): StringReverseWorker
     {
-        if (count($this->freeWorkers) == 0) {
+        if (0 == count($this->freeWorkers)) {
             $worker = new StringReverseWorker();
         } else {
             $worker = array_pop($this->freeWorkers);

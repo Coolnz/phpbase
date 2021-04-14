@@ -2,10 +2,13 @@
 
 namespace DesignPatterns\Structural\Registry\Tests;
 
-use DesignPatterns\Structural\Registry\Registry;
 use stdClass;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Structural\Registry\Registry;
 
+/**
+ * @coversNothing
+ */
 class RegistryTest extends TestCase
 {
     public function testSetAndGetLogger()
@@ -31,7 +34,7 @@ class RegistryTest extends TestCase
     /**
      * notice @runInSeparateProcess here: without it, a previous test might have set it already and
      * testing would not be possible. That's why you should implement Dependency Injection where an
-     * injected class may easily be replaced by a mockup
+     * injected class may easily be replaced by a mockup.
      *
      * @runInSeparateProcess
      * @expectedException \InvalidArgumentException

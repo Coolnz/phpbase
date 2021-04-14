@@ -8,28 +8,28 @@ namespace decorator;
 abstract class Decorator implements ShoesInterface
 {
     /**
-   * 产品生产线对象
-   */
-  protected $shoes;
+     * 产品生产线对象
+     */
+    protected $shoes;
 
-  /**
-   * 构造函数.
-   */
-  public function __construct(ShoesInterface $shoes)
-  {
-      $this->shoes = $shoes;
-  }
+    /**
+     * 构造函数.
+     */
+    public function __construct(ShoesInterface $shoes)
+    {
+        $this->shoes = $shoes;
+    }
 
-  /**
-   * 生产.
-   */
-  public function product()
-  {
-      $this->shoes->product();
-  }
+    /**
+     * 生产.
+     */
+    public function product()
+    {
+        $this->shoes->product();
+    }
 
-  /**
-   * 装饰操作.
-   */
-  abstract public function decorate($value);
+    /**
+     * 装饰操作.
+     */
+    abstract public function decorate($value);
 }

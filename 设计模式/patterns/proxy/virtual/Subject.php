@@ -1,6 +1,8 @@
 <?php
+
 namespace proxy\virtual;
 
-interface Subject {
+interface Subject
+{
     public function doSomething();
 }

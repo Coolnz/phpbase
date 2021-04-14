@@ -2,11 +2,14 @@
 
 namespace DesignPatterns\Behavioral\Strategy\Tests;
 
-use DesignPatterns\Behavioral\Strategy\Context;
-use DesignPatterns\Behavioral\Strategy\DateComparator;
-use DesignPatterns\Behavioral\Strategy\IdComparator;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Behavioral\Strategy\Context;
+use DesignPatterns\Behavioral\Strategy\IdComparator;
+use DesignPatterns\Behavioral\Strategy\DateComparator;
 
+/**
+ * @coversNothing
+ */
 class StrategyTest extends TestCase
 {
     public function provideIntegers()

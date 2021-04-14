@@ -19,27 +19,6 @@ class Sql
      */
     private $where = [];
 
-    public function select(array $fields): Sql
-    {
-        $this->fields = $fields;
-
-        return $this;
-    }
-
-    public function from(string $table, string $alias): Sql
-    {
-        $this->from[] = $table.' AS '.$alias;
-
-        return $this;
-    }
-
-    public function where(string $condition): Sql
-    {
-        $this->where[] = $condition;
-
-        return $this;
-    }
-
     public function __toString(): string
     {
         return sprintf(
@@ -48,5 +27,26 @@ class Sql
             join(', ', $this->from),
             join(' AND ', $this->where)
         );
+    }
+
+    public function select(array $fields): self
+    {
+        $this->fields = $fields;
+
+        return $this;
+    }
+
+    public function from(string $table, string $alias): self
+    {
+        $this->from[] = $table . ' AS ' . $alias;
+
+        return $this;
+    }
+
+    public function where(string $condition): self
+    {
+        $this->where[] = $condition;
+
+        return $this;
     }
 }

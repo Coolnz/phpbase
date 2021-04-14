@@ -16,7 +16,7 @@ class Book implements BookInterface
 
     public function turnPage()
     {
-        $this->page++;
+        ++$this->page;
     }
 
     public function getPage(): int

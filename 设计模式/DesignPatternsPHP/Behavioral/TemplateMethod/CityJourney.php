@@ -6,11 +6,11 @@ class CityJourney extends Journey
 {
     protected function enjoyVacation(): string
     {
-        return "Eat, drink, take photos and sleep";
+        return 'Eat, drink, take photos and sleep';
     }
 
     protected function buyGift(): string
     {
-        return "Buy a gift";
+        return 'Buy a gift';
     }
 }

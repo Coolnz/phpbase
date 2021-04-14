@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: JeffcottLu
- * Date: 2018/12/17
- * Time: 11:54 AM
- */
 
 //$arr = [1, 2, 3];
 //function trans($arr, $num)
@@ -20,15 +14,14 @@
 //
 //var_dump(trans($arr, 3));
 
-
-$arr = [1,2,3];
-foreach($arr as &$v) {
-	//nothing todo.
-	var_dump($arr);
+$arr = [1, 2, 3];
+foreach ($arr as &$v) {
+    //nothing todo.
+    var_dump($arr);
 }
-foreach($arr as $v) {
-	//nothing todo.
-	var_dump($arr);
+foreach ($arr as $v) {
+    //nothing todo.
+    var_dump($arr);
 }
 var_export($arr);
 //output:array(0=>1,1=>2,2=>2)

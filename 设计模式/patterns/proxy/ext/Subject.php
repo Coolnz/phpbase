@@ -1,6 +1,8 @@
 <?php
+
 namespace proxy\ext;
 
-interface Subject {
+interface Subject
+{
     public function doSomething();
 }

@@ -2,9 +2,12 @@
 
 namespace DesignPatterns\Behavioral\TemplateMethod\Tests;
 
-use DesignPatterns\Behavioral\TemplateMethod;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Behavioral\TemplateMethod;
 
+/**
+ * @coversNothing
+ */
 class JourneyTest extends TestCase
 {
     public function testCanGetOnVacationOnTheBeach()
@@ -29,7 +32,7 @@ class JourneyTest extends TestCase
                 'Taking the plane',
                 'Eat, drink, take photos and sleep',
                 'Buy a gift',
-                'Taking the plane'
+                'Taking the plane',
             ],
             $cityJourney->getThingsToDo()
         );

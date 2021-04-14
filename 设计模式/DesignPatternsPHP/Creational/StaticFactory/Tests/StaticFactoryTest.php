@@ -2,9 +2,12 @@
 
 namespace DesignPatterns\Creational\StaticFactory\Tests;
 
-use DesignPatterns\Creational\StaticFactory\StaticFactory;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Creational\StaticFactory\StaticFactory;
 
+/**
+ * @coversNothing
+ */
 class StaticFactoryTest extends TestCase
 {
     public function testCanCreateNumberFormatter()

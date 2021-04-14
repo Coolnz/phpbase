@@ -1,8 +1,9 @@
 <?php
+
 namespace factoryAbstract;
 
 /**
- * 动物园接口
+ * 动物园接口.
  */
 interface ZooInterface extends Income
 {

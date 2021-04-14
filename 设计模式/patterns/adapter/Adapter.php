@@ -1,20 +1,21 @@
 <?php
+
 namespace adapter;
 
 use Exception;
 
 /**
- * 高级播放器适配器
+ * 高级播放器适配器.
  */
 class Adapter
 {
-  private $_advancePlayerInstance;
+    private $_advancePlayerInstance;
 
-  private $_type = '';
+    private $_type = '';
 
-  public function __construct($type='')
-  {
-    switch ($type) {
+    public function __construct($type = '')
+    {
+        switch ($type) {
       case 'mp4':
         $this->_advancePlayerInstance = new AdvanceMp4Player();
         break;
@@ -26,12 +27,12 @@ class Adapter
         throw new Exception("$type is not supported", 400);
         break;
     }
-    $this->_type = $type;
-  }
+        $this->_type = $type;
+    }
 
-  public function play($file='')
-  {
-    switch ($this->_type) {
+    public function play($file = '')
+    {
+        switch ($this->_type) {
       case 'mp4':
         $this->_advancePlayerInstance->playMp4($file);
         break;
@@ -41,5 +42,5 @@ class Adapter
       default:
         break;
     }
-  }
+    }
 }

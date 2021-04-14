@@ -2,9 +2,12 @@
 
 namespace DesignPatterns\Creational\Singleton\Tests;
 
-use DesignPatterns\Creational\Singleton\Singleton;
 use PHPUnit\Framework\TestCase;
+use DesignPatterns\Creational\Singleton\Singleton;
 
+/**
+ * @coversNothing
+ */
 class SingletonTest extends TestCase
 {
     public function testUniqueness()
