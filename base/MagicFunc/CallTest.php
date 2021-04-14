@@ -9,19 +9,16 @@ use PHPUnit\Framework\TestCase;
  */
 class CallTest extends TestCase
 {
-    public $name = '';
-
     public function __construct(?string $name = null, array $data = [], $dataName = '')
     {
         parent::__construct($name, $data, $dataName);
-        $this->name = $name;
     }
 
     //魔术方法 试着少写一个_看下
 
     public function __call($name, $args)
     {
-        echo sprintf('%s-%s', $name, 'success');
+        return sprintf('%s-%s', $name, 'success');
     }
 
     public function eat()
@@ -34,9 +31,47 @@ class CallTest extends TestCase
 
     public function testCall()
     {
-        $call = new self('111');
+        $call = new self();
         $call->test();
         $this->assertEquals('test-success', $call->test());
+    }
+}
+
+/**
+ * @coversNothing
+ */
+class CallTest2 extends TestCase
+{
+    public $str = '';
+
+    public function __construct($str, ?string $name = null, array $data = [], $dataName = '')
+    {
+        parent::__construct($name, $data, $dataName);
+        $this->str = $str;
+    }
+
+    public function __call($name, $argument)
+    {
+        $ret = '';
+        switch ($name) {
+            case 'trim':
+                $new_s = trim($this->str);
+                $ret = new self($new_s);
+                break;
+            case 'strlen':
+                $ret = mb_strlen($this->str);
+                break;
+            default:
+        }
+
+        return $ret;
+    }
+
+    public function testCall2()
+    {
+        $s = new self('   codeman   ');
+        $length = $s->trim()->strlen();
+        $this->assertEquals(7, $length);
     }
 }
 

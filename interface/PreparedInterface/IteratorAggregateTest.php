@@ -1,6 +1,6 @@
 <?php
 
-namespace Inter;
+namespace Inter\PreparedInterface;
 
 use PHPUnit\Framework\TestCase;
 
