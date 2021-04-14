@@ -22,5 +22,8 @@
             "Helpers/user.php",
             "Helpers/yw.php"
         ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }

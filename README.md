@@ -1,11 +1,16 @@
 snippets_php
 
 
+# 项目结构
 
 1. Helpers
 2. 基本数据处理
 3. 经典代码
 4. 设计模式
+
+# 基本使用
+
+1. `php-cs-fixer fix $PWD --config=cs.php`
 
 
 

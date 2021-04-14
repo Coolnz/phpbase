@@ -1,2 +1,9 @@
+
+# dir
 vendor
 /vendor/bin/
+
+
+# file
+.php_cs.cache
+.phpunit.result.cache
