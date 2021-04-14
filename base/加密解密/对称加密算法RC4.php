@@ -1,10 +1,5 @@
 <?php
 
-/*
- * rc4加密算法
- * $data 要加密的数据
- * $pwd 密钥
- */
 
 function rc4($data, $pwd)//　$data需加密字符串  $pwd密钥
 {

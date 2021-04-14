@@ -1,5 +1,5 @@
 <?php
-////测试类
+
 //class Person{
 //	public function code(){
 //		echo 'code makes me happy'.PHP_EOL;

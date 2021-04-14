@@ -1,9 +1,4 @@
 <?php
-/*
-* @todo   UTF-8?GB2312
-* @param  ?????
-* @return ?????????
-*/
 function str_u2g($str)
 {
     return iconv('UTF-8', 'GB2312//IGNORE', $str);

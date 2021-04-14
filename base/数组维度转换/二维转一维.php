@@ -1,10 +1,5 @@
 <?php
 
-/**
- * [求教一个PHP二维数组转一维数组最有效率的方法 - SegmentFault 思否](https://segmentfault.com/q/1010000004087076).
- *
- * [PHP将二维数组转为一维数组_百度经验](https://jingyan.baidu.com/article/1974b289a233d6f4b1f77431.html)
- */
 
 /**
  * 用array_map()实现二维转一维；.

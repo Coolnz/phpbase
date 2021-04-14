@@ -1,6 +1,5 @@
 <?php
 
-//$arr = [1, 2, 3];
 //function trans($arr, $num)
 //{
 //	$str = implode(',', $arr);

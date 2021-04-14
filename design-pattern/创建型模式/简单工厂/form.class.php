@@ -1,6 +1,5 @@
 <?php
 
-//根据index中提交的不同action的值返回不同的表单
 class Form
 {
     private $action;

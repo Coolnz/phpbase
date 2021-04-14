@@ -1,10 +1,5 @@
 <?php
 
-/*
-* @todo   获取目录名
-* @param  路径
-* @return 目录名
-*/
 function get_dirname($path)
 {
     return dirname($path);

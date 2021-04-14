@@ -1,8 +1,12 @@
 <?php
+
 namespace Inter;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @coversNothing
+ */
 class TraversableTest extends TestCase
 {
     public function testTraversable()
