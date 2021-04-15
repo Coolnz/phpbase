@@ -5,6 +5,9 @@ namespace MagicFunc;
 use PHPUnit\Framework\TestCase;
 
 /**
+ * [说说 PHP 的魔术方法及其应用 | Laravel China 社区](https://learnku.com/articles/4404/talking-about-the-magic-method-of-php-and-its-application)
+ * [私有属性方法 · PHP基础 · 看云](https://www.kancloud.cn/php-development/php-basic/531710).
+ *
  * __set() __get() __isset() __unset().
  * [私有属性方法 · PHP基础 · 看云](https://www.kancloud.cn/php-development/php-basic/531710)
  *
