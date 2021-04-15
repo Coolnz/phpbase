@@ -1,6 +1,6 @@
 <?php
 
-namespace Inter\PreparedInterface;
+namespace Base\ClassPath\Inter\PreparedInterface\Iterator;
 
 use PHPUnit\Framework\TestCase;
 

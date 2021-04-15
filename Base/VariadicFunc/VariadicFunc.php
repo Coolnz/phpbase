@@ -42,6 +42,4 @@ class VariadicFunc extends TestCase
 
         $this->assertEquals('HI THERE THANKS FOR REGISTERING, HOPE YOU LIKE IT', $res);
     }
-
-    
 }

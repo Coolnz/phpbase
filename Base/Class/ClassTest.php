@@ -1,6 +1,6 @@
 <?php
 
-namespace ClassPath;
+namespace Base\ClassPath;
 
 use PHPUnit\Framework\TestCase;
 
