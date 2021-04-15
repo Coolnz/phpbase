@@ -11,6 +11,7 @@ class ArrayReduceTest extends TestCase
 {
     private $arr = [1, 2, 3, 4, 5];
 
+    // 向用户自定义函数发送数组中的值，并返回一个字符串
     public function testReduce1()
     {
         $res = $this->reduce1($this->arr);
@@ -28,6 +29,9 @@ class ArrayReduceTest extends TestCase
      */
     public function reduce1($list)
     {
+        // $arr
+        // $func 函数名称
+        // $init 发送到函数的初始值
         $sum = array_reduce($list, function ($result, $v) {
             dump($result);
 
