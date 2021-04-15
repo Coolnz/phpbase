@@ -1,13 +1,51 @@
 <?php
 
+if (!function_exists('rc4')) {
+    // 对称加密算法RC4
+    // $data需加密字符串  $pwd密钥
+    function rc4($data, $pwd)
+    {
+        $key[] = '';
+        $box[] = '';
+
+        $pwd_length = mb_strlen($pwd);
+        $data_length = mb_strlen($data);
+        $cipher = '';
+
+        for ($i = 0; $i < 256; ++$i) {
+            $key[$i] = ord($pwd[$i % $pwd_length]);
+            $box[$i] = $i;
+        }
+
+        for ($j = $i = 0; $i < 256; ++$i) {
+            $j = ($j + $box[$i] + $key[$i]) % 256;
+            $tmp = $box[$i];
+            $box[$i] = $box[$j];
+            $box[$j] = $tmp;
+        }
+
+        for ($a = $j = $i = 0; $i < $data_length; ++$i) {
+            $a = ($a + 1) % 256;
+            $j = ($j + $box[$a]) % 256;
+
+            $tmp = $box[$a];
+            $box[$a] = $box[$j];
+            $box[$j] = $tmp;
+
+            $k = $box[(($box[$a] + $box[$j]) % 256)];
+            $cipher .= chr(ord($data[$i]) ^ $k);
+        }
+
+        return $cipher;
+    }
+}
+
 /**
  * @url https://blog.csdn.net/sexy_it/article/details/23174915
  *
  * @param $str
- *
- * @return string
  */
-function escape($str)
+function jsEscape($str): string
 {
     preg_match_all("/[\xc2-\xdf][\x80-\xbf]+|[\xe0-\xef][\x80-\xbf]{2}|[\xf0-\xff][\x80-\xbf]{3}|[\x01-\x7f]+/e", $str, $r);
     //匹配utf-8字符，
@@ -32,10 +70,8 @@ function escape($str)
  * php js_unescape correspond to js escape.
  *
  * @param $str
- *
- * @return string
  */
-function js_unescape($str)
+function jsUnEscape($str): string
 {
     $ret = '';
     $len = mb_strlen($str);

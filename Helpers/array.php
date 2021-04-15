@@ -144,6 +144,7 @@ if (!function_exists('arrayToString')) {
 }
 
 if (!function_exists('combineSameKey')) {
+    // 合并相同的key，把二维数组转三维
     function combineSameKey($array, $combineKey)
     {
         $result = [];
@@ -160,4 +161,113 @@ if (!function_exists('cvtJsToArr')) {
     {
         return json_decode($json, true);
     }
+}
+
+/**
+ * @see https://blog.csdn.net/fdipzone/article/details/78070334
+ *
+ * 将多个一维数组合拼成二维数组（使用的时候，注意$key的使用；）
+ *
+ * @param array $keys 定义新二维数组的键值，每个对应一个一维数组
+ * @param array $args 多个一维数组集合
+ */
+function arrMergeMore($keys, ...$args): array
+{
+
+    // 检查参数是否正确
+    if (!$keys || !is_array($keys) || !$args || !is_array($args) || count($keys) != count($args)) {
+        return [];
+    }
+
+    // 一维数组中最大长度
+    $max_len = 0;
+
+    // 整理数据，把所有一维数组转重新索引
+    for ($i = 0,$len = count($args); $i < $len; ++$i) {
+        $args[$i] = array_values($args[$i]);
+
+        if (count($args[$i]) > $max_len) {
+            $max_len = count($args[$i]);
+        }
+    }
+
+    $result = [];
+
+    for ($i = 0; $i < $max_len; ++$i) {
+        $tmp = [];
+        foreach ($keys as $k => $v) {
+            if (isset($args[$k][$i])) {
+                $tmp[$v] = $args[$k][$i];
+            }
+        }
+        $result[] = $tmp;
+    }
+
+    return $result;
+}
+
+/**
+ *  二维数组去除重复值
+ *
+ * 用array_map()重构了一下，为什么use要引入的变量是作为入参的$key，而不是声明的$res；
+ *
+ * @param $arr
+ * @param $key
+ */
+function uniqueArr($arr, $key): array
+{
+    //建立一个目标数组
+    $res = [];
+    array_map(function ($value) use (&$key) {
+        //查看是否有重复值
+        if (isset($res[$value[$key]])) {
+            //如果重复则销毁；
+            unset($value[$key]);
+        } else {
+            $res[$value[$key]] = $value;
+        }
+    }, $arr);
+
+    return $res;
+}
+
+/**
+ * 对二维数组按照 title+pubscore 去重.
+ *
+ * @param $arr
+ * @param $key1
+ * @param $key2
+ *
+ * @return mixed
+ */
+function uniqueArrByKey($arr, $key1, $key2)
+{
+    $tmp_key = [];
+    foreach ($arr as $key => $item) {
+        if (in_array($item[$key1] . $item[$key2], $tmp_key)) {
+            unset($arr[$key]);
+        } else {
+            $tmp_key[] = $item[$key1] . $item[$key2];
+        }
+    }
+
+    return $arr;
+}
+
+// [[算法]PHP随机合并数组并保持原排序 - 韭白 - 博客园](https://www.cnblogs.com/shockerli/p/shuffle-merge-array.html)
+// 随机合并两个数组并保持原数组的排序
+function shuffleMergeArr($array1, $array2)
+{
+    $mergeArray = [];
+    $sum = count($array1) + count($array2);
+    for ($k = $sum; $k > 0; --$k) {
+        $number = mt_rand(1, 2);
+        if (1 == $number) {
+            $mergeArray[] = $array2 ? array_shift($array2) : array_shift($array1);
+        } else {
+            $mergeArray[] = $array1 ? array_shift($array1) : array_shift($array2);
+        }
+    }
+
+    return $mergeArray;
 }

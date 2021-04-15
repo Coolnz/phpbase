@@ -15,12 +15,12 @@
 
         ],
         "files": [
-            "helpers.php",
             "Helpers/array.php",
             "Helpers/time.php",
             "Helpers/file.php",
             "Helpers/user.php",
-            "Helpers/yw.php"
+            "Helpers/yw.php",
+            "Helpers/encrypt.php"
         ]
     },
     "require-dev": {

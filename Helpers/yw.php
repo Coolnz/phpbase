@@ -7,6 +7,14 @@ if (!function_exists('route_class')) {
     }
 }
 
+if (!function_exists('randomCode')) {
+    function randomCode(int $num)
+    {
+        //生成4位随机数，左侧补0
+        return str_pad(random_int(1, 999999), $num, 0, STR_PAD_LEFT);
+    }
+}
+
 //随机验证码
 if (!function_exists('smsCode')) {
     function smsCode()
